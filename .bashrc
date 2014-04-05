@@ -4,7 +4,11 @@
 export GRADLE_HOME=~/dev/build_tools/build_tools/gradle
 export GRADLE_COMMON=~/dev/build_tools/build_tools/gradle_common
 export GRADLE_OPTS=-Dorg.gradle.daemon=true
-export PATH=$PATH:$GRADLE_HOME/bin
+export PATH=$PATH:$GRADLE_HOME/bin:$BASH_CONFIG_DIR/scripts
+
+export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
+
+. $BASH_CONFIG_DIR/scripts/git-ext-completion.bash
 
 if [ `id -u` != '0' ]; then
 

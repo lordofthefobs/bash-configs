@@ -1,6 +1,8 @@
 export PATH=/Users/sang.park/bin:/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export EDITOR='subl -w'
 
+export BASH_CONFIG_DIR="/Users/sang.park/dev/personal/bash-configs"
+
 alias reload-aliases="load_aliases"
 
 function load_aliases() {
