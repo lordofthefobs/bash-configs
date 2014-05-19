@@ -1,0 +1,5 @@
+alias v="vagrant"
+alias v.up="vagrant up"
+alias v.s.core="vagrant ssh core"
+alias v.s.services="vagrant ssh services"
+alias v.st="vagrant status"
