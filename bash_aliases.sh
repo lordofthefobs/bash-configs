@@ -28,3 +28,4 @@ fi
 
 alias cd.tux="cd ~/dev/tux_aci/tux_aci"
 alias cd.acideploy="cd ~/dev/acideploy/acideploy"
+alias cd.personal="cd ~/dev/personal"
