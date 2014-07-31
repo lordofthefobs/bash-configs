@@ -26,7 +26,3 @@ fi
 
 # increases file descriptor limit
 # ulimit -n 1024
-
-alias ll="ls -l"
-alias la="ls -a"
-alias lla="ls -la"

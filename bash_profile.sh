@@ -9,14 +9,16 @@ alias reload-aliases="load_aliases"
 
 function load_aliases() {
 	# load bash alias file
-	if [ -f $BASH_CONFIG_DIR/bash_aliases.sh ]; then
-		source $BASH_CONFIG_DIR/bash_aliases.sh
+	if [ -f $BASH_CONFIG_DIR/load_aliases.sh ]; then
+		source $BASH_CONFIG_DIR/load_aliases.sh
 	fi
 
 	
 }
 
 load_aliases
+
+
 # LocationLabs-specific stuff
 [[ -s "$HOME/.bashrc_ll" ]] && source "$HOME/.bashrc_ll"
 

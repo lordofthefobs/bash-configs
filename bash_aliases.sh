@@ -1,31 +1,18 @@
-### Load Files
+### ls aliases ###
 
-# load .bashrc file
-if [ -f $BASH_CONFIG_DIR/bashrc.sh ]; then
-   source $BASH_CONFIG_DIR/bashrc.sh
-fi
-
-# load .bash_ps1
-if [ -f $BASH_CONFIG_DIR/bash_ps1.sh ]; then
-   source $BASH_CONFIG_DIR/bash_ps1.sh
-fi	
-
-# load git aliases
-if [ -f $BASH_CONFIG_DIR/git_aliases.sh ]; then
-	source $BASH_CONFIG_DIR/git_aliases.sh
-fi
-
-if [ -f "$BASH_CONFIG_DIR/scripts/.git-completion.bash" ]; then
-	. $BASH_CONFIG_DIR/scripts/.git-completion.bash
-fi
-
-# load vagrant aliases
-if [ -f $BASH_CONFIG_DIR/vagrant_aliases.sh ]; then
-	source $BASH_CONFIG_DIR/vagrant_aliases.sh
-fi	
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
 
 ### CD Aliases ###
 
 alias cd.tux="cd ~/dev/tux_aci/tux_aci"
 alias cd.acideploy="cd ~/dev/acideploy/acideploy"
 alias cd.personal="cd ~/dev/personal"
+
+
+### Markdown Aliases ###
+
+alias mdless="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | less"
+alias mdcat="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | cat"
+alias mdtail="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | tail"
