@@ -16,3 +16,16 @@ alias cd.personal="cd ~/dev/personal"
 alias mdless="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | less"
 alias mdcat="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | cat"
 alias mdtail="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | tail"
+
+### Webstorm ###
+alias webide="/Applications/WebStorm.app/Contents/MacOS/webide"
+
+### XCode ###
+function xcworkspace() {
+   workspace_files=$(find . -maxdepth 1 -name "*.xcworkspace")
+   open $workspace_files
+}
+
+
+### eva ###
+alias eva="node node_modules/eva"

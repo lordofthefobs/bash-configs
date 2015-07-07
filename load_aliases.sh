@@ -28,3 +28,7 @@ fi
 if [ -f $BASH_CONFIG_DIR/vagrant_aliases.sh ]; then
 	source $BASH_CONFIG_DIR/vagrant_aliases.sh
 fi	
+
+if [ -f $BASH_CONFIG_DIR/ll_aliases.sh ]; then
+	source $BASH_CONFIG_DIR/ll_aliases.sh
+fi

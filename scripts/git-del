@@ -4,7 +4,7 @@
 path=`git rev-parse --show-toplevel`
 repo=`basename $path`
 branch=$1
-message=$2
+
 
 # colorize it
 function log() {
@@ -16,8 +16,8 @@ function error_log() {
 }
 
 # ensure we have everything we need to run this helper
-if [[ -z "$repo" ]] || [[ -z "$branch" ]] || [[ -z "$message" ]]; then
-   error_log "Must specific branch to close with a message"
+if [[ -z "$repo" ]] || [[ -z "$branch" ]]; then
+   error_log "Must specific branch to close"
    exit 1
 fi
 
@@ -29,7 +29,8 @@ fi
 
 # close branch on remote
 log "closing branch on remote"
-ssh git@git.locationlabs.com closebranch $repo $branch $message
+git push origin :$branch
+# ssh git@git.locationlabs.com closebranch $repo $branch $message
 
 # remove local copy
 log "removing local copy"

@@ -26,3 +26,5 @@ load_aliases
 [[ -s "/Users/sang.park/.gvm/bin/gvm-init.sh" ]] && source "/Users/sang.park/.gvm/bin/gvm-init.sh"
 
 [ -s "/Users/sang.park/.nvm/nvm.sh" ] && . "/Users/sang.park/.nvm/nvm.sh" # This loads nvm
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
