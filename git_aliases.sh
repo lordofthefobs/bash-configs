@@ -4,5 +4,8 @@ alias gcb="g.clipboard"
 alias gcbco="g.clipboard.checkout"
 alias g.clipboard.checkout='g.clipboard checkout'
 alias g.clipboard="git $1 $(pbpaste)"
+alias gsquash="git rebase -i HEAD~$1"
+alias git.repolist="ssh git@git repolist"
+alias g.repolist="git.repolist"
 
 export PATH=$PATH:/Users/sang.park/dev/utils/git/git-plus

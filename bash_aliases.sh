@@ -22,10 +22,27 @@ alias webide="/Applications/WebStorm.app/Contents/MacOS/webide"
 
 ### XCode ###
 function xcworkspace() {
-   workspace_files=$(find . -maxdepth 1 -name "*.xcworkspace")
+   if [ -d "$1" ]
+   then
+      workspace_files=$(find $1 -maxdepth 1 -name "*.xcworkspace")
+   else 
+      workspace_files=$(find . -maxdepth 1 -name "*.xcworkspace")
+   fi
+
    open $workspace_files
 }
 
-
 ### eva ###
 alias eva="node node_modules/eva"
+
+
+### 
+alias slc="sl ."
+
+
+### CocoaPod
+function clearPod() {
+   #rm -rf "${HOME}/Library/Caches/CocoaPods"
+   rm -rf "`pwd`/Pods/"
+   rm Podfile.lock
+}
