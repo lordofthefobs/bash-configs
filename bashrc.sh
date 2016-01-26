@@ -10,6 +10,10 @@ export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
 . $BASH_CONFIG_DIR/scripts/git-ext-completion.bash
 
+if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
+    source `brew --prefix`/etc/bash_completion.d/vagrant
+fi
+
 if [ `id -u` != '0' ]; then
 
   # Always use pip/distribute

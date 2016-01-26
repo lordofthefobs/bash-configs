@@ -8,4 +8,12 @@ alias gsquash="git rebase -i HEAD~$1"
 alias git.repolist="ssh git@git repolist"
 alias g.repolist="git.repolist"
 
+function gllsquash {
+   git rebase -i HEAD~$1
+}
+
+function gllclone {
+   git clone git@git.locationlabs.com:$1 -b develop
+}
+
 export PATH=$PATH:/Users/sang.park/dev/utils/git/git-plus
