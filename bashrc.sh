@@ -4,20 +4,14 @@
 export GRADLE_HOME=~/dev/build_tools/build_tools/gradle
 export GRADLE_COMMON=~/dev/build_tools/build_tools/gradle_common
 export GRADLE_OPTS=-Dorg.gradle.daemon=true
-export PATH=$PATH:$GRADLE_HOME/bin:$BASH_CONFIG_DIR/scripts
 
 export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
-
-. $BASH_CONFIG_DIR/scripts/git-ext-completion.bash
-
-if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
-    source `brew --prefix`/etc/bash_completion.d/vagrant
-fi
 
 if [ `id -u` != '0' ]; then
 
   # Always use pip/distribute
   export VIRTUALENV_USE_DISTRIBUTE=1
+#  export VIRTUAL_ENV_DISABLE_PROMPT=1
 
   # All virtualenvs will be stored here
   export WORKON_HOME=$HOME/.virtualenvs

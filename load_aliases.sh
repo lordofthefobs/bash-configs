@@ -1,34 +1,16 @@
-### Load Files
-
-# load .bashrc file
-if [ -f $BASH_CONFIG_DIR/bashrc.sh ]; then
-   source $BASH_CONFIG_DIR/bashrc.sh
-fi
-
-# load .bash_ps1
-if [ -f $BASH_CONFIG_DIR/bash_ps1.sh ]; then
-   source $BASH_CONFIG_DIR/bash_ps1.sh
-fi	
+### Load 
 
 #load bash_aliases
-if [ -f $BASH_CONFIG_DIR/bash_aliases.sh ]; then
-	source $BASH_CONFIG_DIR/bash_aliases.sh
-fi
+load_file bash_aliases.sh
 
 # load git aliases
-if [ -f $BASH_CONFIG_DIR/git_aliases.sh ]; then
-	source $BASH_CONFIG_DIR/git_aliases.sh
-fi
-
-if [ -f "$BASH_CONFIG_DIR/scripts/.git-completion.bash" ]; then
-	. $BASH_CONFIG_DIR/scripts/.git-completion.bash
-fi
+load_file git/git_aliases.sh
 
 # load vagrant aliases
-if [ -f $BASH_CONFIG_DIR/vagrant_aliases.sh ]; then
-	source $BASH_CONFIG_DIR/vagrant_aliases.sh
-fi	
+load_file vagrant/vagrant_aliases.sh
 
-if [ -f $BASH_CONFIG_DIR/ll_aliases.sh ]; then
-	source $BASH_CONFIG_DIR/ll_aliases.sh
-fi
+# load docker aliases
+load_file docker/docker_aliases.sh
+
+# load ll aliases
+load_file ll_aliases.sh

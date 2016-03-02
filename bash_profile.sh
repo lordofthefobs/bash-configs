@@ -5,22 +5,33 @@ export BASH_CONFIG_DIR="/Users/sang.park/dev/personal/bash-configs"
 
 export DISABLE_LL_PROMPT='false'
 
+alias reload-all="load_profiles && load_aliases"
+alias reload-profiles="load_profiles"
 alias reload-aliases="load_aliases"
+
+function load_file() {
+   if [ -f "$BASH_CONFIG_DIR/$1" ]; then
+      source "$BASH_CONFIG_DIR/$1"
+   fi
+}
+
+function load_profiles() {
+   # load bash alias file
+   if [ -f $BASH_CONFIG_DIR/load_profiles.sh ]; then
+      source $BASH_CONFIG_DIR/load_profiles.sh
+   fi
+}
 
 function load_aliases() {
 	# load bash alias file
 	if [ -f $BASH_CONFIG_DIR/load_aliases.sh ]; then
 		source $BASH_CONFIG_DIR/load_aliases.sh
 	fi
-
-	
 }
 
+load_profiles
 load_aliases
 
-
-# LocationLabs-specific stuff
-[[ -s "$HOME/.bashrc_ll" ]] && source "$HOME/.bashrc_ll"
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/sang.park/.gvm/bin/gvm-init.sh" ]] && source "/Users/sang.park/.gvm/bin/gvm-init.sh"
@@ -28,3 +39,5 @@ load_aliases
 [ -s "/Users/sang.park/.nvm/nvm.sh" ] && . "/Users/sang.park/.nvm/nvm.sh" # This loads nvm
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
