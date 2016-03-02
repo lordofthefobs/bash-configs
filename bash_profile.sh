@@ -17,16 +17,12 @@ function load_file() {
 
 function load_profiles() {
    # load bash alias file
-   if [ -f $BASH_CONFIG_DIR/load_profiles.sh ]; then
-      source $BASH_CONFIG_DIR/load_profiles.sh
-   fi
+   load_file load_profiles.sh
 }
 
 function load_aliases() {
 	# load bash alias file
-	if [ -f $BASH_CONFIG_DIR/load_aliases.sh ]; then
-		source $BASH_CONFIG_DIR/load_aliases.sh
-	fi
+	load_file load_aliases.sh
 }
 
 load_profiles
