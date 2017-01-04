@@ -10,6 +10,20 @@ alias cd.tux="cd ~/dev/tux_aci/tux_aci"
 alias cd.acideploy="cd ~/dev/acideploy/acideploy"
 alias cd.personal="cd ~/dev/personal"
 
+alias cdp="cd -"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias o="open"
+alias op="open"
+
+
+subs.command() {
+   ^$1^$2^
+}
 
 ### Markdown Aliases ###
 
@@ -47,11 +61,6 @@ function xcodeproj() {
 
 ### eva ###
 alias eva="node node_modules/eva"
-
-
-### 
-alias slc="sl ."
-
 
 ### CocoaPod
 function clearPod() {

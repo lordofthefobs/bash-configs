@@ -5,8 +5,11 @@ alias gcbco="g.clipboard.checkout"
 alias g.clipboard.checkout='g.clipboard checkout'
 alias g.clipboard="git $1 $(pbpaste)"
 alias gsquash="git rebase -i HEAD~$1"
-alias git.repolist="ssh git@git repolist"
-alias g.repolist="git.repolist"
+
+alias grepolist="ssh git@git repolist"
+alias grepo="grepolist | grep"
+
+alias grsci="gr @sci git"
 
 function gllsquash {
    git rebase -i HEAD~$1
