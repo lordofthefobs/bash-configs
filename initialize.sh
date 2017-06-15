@@ -1,7 +1,7 @@
 export PATH=/Users/sang.park/bin:/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export EDITOR='subl -w'
 
-export BASH_CONFIG_DIR="/Users/sang.park/dev/personal/bash-configs"
+export BASH_CONFIG_DIR="$HOME/dev/bash-configs"
 
 export DISABLE_LL_PROMPT='false'
 
