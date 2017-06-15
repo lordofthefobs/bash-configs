@@ -1,8 +1,8 @@
 #!/bin/bash
 
 function load_file() {
-   if [ -f "$BASH_CONFIG_DIR/$1" ]; then
-      source "$BASH_CONFIG_DIR/$1"
+   if [ -f "$BASH_CONFIGS_DIR/$1" ]; then
+      source "$BASH_CONFIGS_DIR/$1"
    fi
 }
 
