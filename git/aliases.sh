@@ -16,7 +16,7 @@ function gllsquash {
 }
 
 function gllclone {
-   git clone git@git.locationlabs.com:$1 -b develop
+   git clone git@github.int.llabs.io:llabs/$1
 }
 
 function gllrebase {

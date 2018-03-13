@@ -1,23 +1,34 @@
-export GRADLE_HOME=~/dev/build_tools/build_tools/gradle
-export GRADLE_COMMON=~/dev/build_tools/build_tools/gradle_common
-export GRADLE_OPTS=-Dorg.gradle.daemon=true
-
 export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
-if [ `id -u` != '0' ]; then
+export EDITOR='subl -w'
 
-  # Always use pip/distribute
-  export VIRTUALENV_USE_DISTRIBUTE=1
-#  export VIRTUAL_ENV_DISABLE_PROMPT=1
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
 
-  # All virtualenvs will be stored here
-  export WORKON_HOME=$HOME/.virtualenvs
+export DISABLE_LL_PROMPT='false'
 
-  source /usr/local/bin/virtualenvwrapper.sh
-  export PIP_VIRTUALENV_BASE=$WORKON_HOME
-  export PIP_RESPECT_VIRTUALENV=true
+shopt -s autocd
 
-fi
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/sang.park/.gvm/bin/gvm-init.sh" ]] && source "/Users/sang.park/.gvm/bin/gvm-init.sh"
+
+## Setup NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## Setup Fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+## setup rvm
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+## iTerm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+## Setup jenv
+eval "$(jenv init -)"
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 # increases file descriptor limit
 # ulimit -n 1024
