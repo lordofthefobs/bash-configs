@@ -26,3 +26,5 @@ load_file gradle/profile.sh
 load_file dev/profile.sh
 
 load_file ios/profile.sh
+
+load_file kubectl/profile.sh

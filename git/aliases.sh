@@ -6,8 +6,8 @@ alias g.clipboard.checkout='g.clipboard checkout'
 alias g.clipboard="git $1 $(pbpaste)"
 alias gsquash="git rebase -i HEAD~$1"
 
-alias grepolist="ssh git@git repolist"
-alias grepo="grepolist | grep"
+alias gbrname="git rev-parse --abbrev-ref HEAD"
+alias gbrnamecopy="gbrname | pbcopy"
 
 alias grsci="gr @sci git"
 

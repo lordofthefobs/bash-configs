@@ -23,3 +23,5 @@ load_file react-native/aliases.sh
 load_file dev/aliases.sh
 
 load_file ios/aliases.sh
+
+load_file kubectl/aliases.sh

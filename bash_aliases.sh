@@ -25,3 +25,5 @@ alias op="open"
 alias mdless="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | less"
 alias mdcat="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | cat"
 alias mdtail="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | tail"
+
+alias g="grep"
