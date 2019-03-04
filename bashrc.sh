@@ -18,6 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 
 ## Setup Fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
 
 ## setup rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
