@@ -8,7 +8,7 @@ function kbg() {
   search=${array[$len-1]}
   kubeargs=${array[@]:0:$len-1}
 
-  kb $kubeargs | awk "NR==1 || /$search/"
+  kb get $kubeargs | awk "NR==1 || /$search/"
 }
 
 alias kb.use='kb config use-context'
