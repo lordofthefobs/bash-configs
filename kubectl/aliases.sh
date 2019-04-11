@@ -12,3 +12,13 @@ function kbg() {
 }
 
 alias kb.use='kb config use-context'
+
+function setup_kubectl_contexts() {
+    kubectl config set-context afp-test --cluster=att.kube.dev.llabs.io --namespace=afp-test --user=sang.park@avast.com
+    kubectl config set-context afp-lab --cluster=att.kube.llabs.io --namespace=afp-lab --user=sang.park@avast.com
+    kubectl config set-context afp-prod --cluster=att.kube.llabs.io --namespace=afp-prod --user=sang.park@avast.com
+
+    kubectl config set-context ring-test --cluster=ott.kube.dev.llabs.io --namespace=ring-test --user=sang.park@avast.com
+    kubectl config set-context ring-lab --cluster=ott.kube.llabs.io --namespace=ring-lab --user=sang.park@avast.com
+    kubectl config set-context ring-prod --cluster=ott.kube.llabs.io --namespace=ring-prod --user=sang.park@avast.com
+}
