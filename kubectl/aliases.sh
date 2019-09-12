@@ -18,7 +18,10 @@ function setup_kubectl_contexts() {
     kubectl config set-context afp-lab --cluster=att.kube.llabs.io --namespace=afp-lab --user=sang.park@avast.com
     kubectl config set-context afp-prod --cluster=att.kube.llabs.io --namespace=afp-prod --user=sang.park@avast.com
 
-    kubectl config set-context ring-test --cluster=ott.kube.dev.llabs.io --namespace=ring-test --user=sang.park@avast.com
+    kubectl config set-context ring-dev --cluster=ott.kube.dev.llabs.io --namespace=ring-dev --user=sang.park@avast.com
     kubectl config set-context ring-lab --cluster=ott.kube.llabs.io --namespace=ring-lab --user=sang.park@avast.com
     kubectl config set-context ring-prod --cluster=ott.kube.llabs.io --namespace=ring-prod --user=sang.park@avast.com
+
+    kubectl config set-context tmo-dev --cluster=ott.kube.dev.llabs.io --namespace=tmo-dev --user=sang.park@avast.com
+    kubectl config set-context tmo-prod --cluster=ott.kube.llabs.io --namespace=tmo-prod --user=sang.park@avast.com
 }
