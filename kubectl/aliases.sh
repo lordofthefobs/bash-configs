@@ -15,6 +15,7 @@ alias kb.use='kb config use-context'
 
 function setup_kubectl_contexts() {
     kubectl config set-context afp-test --cluster=att.kube.dev.llabs.io --namespace=afp-test --user=sang.park@avast.com
+    kubectl config set-context afp-stage --cluster=att.kube.dev.llabs.io --namespace=afp-stage --user=sang.park@avast.com
     kubectl config set-context afp-lab --cluster=att.kube.llabs.io --namespace=afp-lab --user=sang.park@avast.com
     kubectl config set-context afp-prod --cluster=att.kube.llabs.io --namespace=afp-prod --user=sang.park@avast.com
 
