@@ -25,4 +25,10 @@ function setup_kubectl_contexts() {
 
     kubectl config set-context tmo-dev --cluster=ott.kube.dev.llabs.io --namespace=tmo-dev --user=sang.park@avast.com
     kubectl config set-context tmo-prod --cluster=ott.kube.llabs.io --namespace=tmo-prod --user=sang.park@avast.com
+
+    kubectl config set-context vcf-test --cluster=vzw.kube.dev.llabs.io --namespace=vcf-test --user=sang.park@avast.com
+    kubectl config set-context vcf-stage --cluster=vzw.kube.dev.llabs.io --namespace=vcf-stage --user=sang.park@avast.com
+    kubectl config set-context vcf-ext-stable --cluster=k8s.vzw.llabs.io --namespace=vcf-ext-stable --user=sang.park@avast.com
+    kubectl config set-context vcf-prod --cluster=k8s.vzw.llabs.io --namespace=vcf-prod --user=sang.park@avast.com
+
 }
