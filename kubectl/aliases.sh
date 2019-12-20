@@ -31,4 +31,11 @@ function setup_kubectl_contexts() {
     kubectl config set-context vcf-ext-stable --cluster=k8s.vzw.llabs.io --namespace=vcf-ext-stable --user=sang.park@avast.com
     kubectl config set-context vcf-prod --cluster=k8s.vzw.llabs.io --namespace=vcf-prod --user=sang.park@avast.com
 
+    kubectl config set-context voda-test --cluster=voda.kube.dev.llabs.io --namespace=voda-test --user=sang.park@avast.com
+    kubectl config set-context voda-stage --cluster=voda.kube.llabs.io --namespace=voda-stage --user=sang.park@avast.com
+    kubectl config set-context voda-prod --cluster=voda.kube.llabs.io --namespace=voda-prod --user=sang.park@avast.com
+
+    kubectl config set-context wind3-test --cluster=wind3.kube.dev.llabs.io --namespace=wind3-test --user=sang.park@avast.com
+    kubectl config set-context wind3-stage --cluster=wind3.kube.llabs.io --namespace=wind3-stage --user=sang.park@avast.com
+    kubectl config set-context wind3-prod --cluster=wind3.kube.llabs.io --namespace=wind3-prod --user=sang.park@avast.com
 }
