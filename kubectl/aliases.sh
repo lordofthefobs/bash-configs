@@ -38,4 +38,8 @@ function setup_kubectl_contexts() {
     kubectl config set-context wind3-test --cluster=wind3.kube.dev.llabs.io --namespace=wind3-test --user=sang.park@avast.com
     kubectl config set-context wind3-stage --cluster=wind3.kube.llabs.io --namespace=wind3-stage --user=sang.park@avast.com
     kubectl config set-context wind3-prod --cluster=wind3.kube.llabs.io --namespace=wind3-prod --user=sang.park@avast.com
+
+    kubectl config set-context kyivstar-test --cluster=kyivstar.kube.dev.llabs.io --namespace=kyivstar-test --user=sang.park@avast.com
+    kubectl config set-context kyivstar-stage --cluster=kyivstar.kube.llabs.io --namespace=kyivstar-stage --user=sang.park@avast.com
+    kubectl config set-context kyivstar-prod --cluster=kyivstar.kube.llabs.io --namespace=kyivstar-prod --user=sang.park@avast.com
 }
