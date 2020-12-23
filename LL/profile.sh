@@ -54,12 +54,6 @@ export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
 # have bash ignore certain file endings during name completion
 export FIGNORE=\~:CVS:.svn
 
-### pyenv
-if which pyenv > /dev/null; then 
-    eval "$(pyenv init -)";
-    pyenv virtualenvwrapper
-fi
-
 function _bash_completion() {
     if [ -f $BPREFIX/etc/bash_completion ]; then
         . $BPREFIX/etc/bash_completion

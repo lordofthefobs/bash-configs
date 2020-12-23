@@ -6,16 +6,15 @@ alias lla="ls -la"
 
 ### CD Aliases ###
 
-alias cd.tux="cd ~/dev/tux_aci/tux_aci"
-alias cd.acideploy="cd ~/dev/acideploy/acideploy"
-alias cd.personal="cd ~/dev/personal"
-
-alias cdp="cd -"
-
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+function mkcd() {
+    mkdir $1 
+    cd $1
+}
 
 alias o="open"
 alias op="open"
