@@ -1,5 +1,1 @@
-#!/usr/bin/env bash
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+alias cors-disabled='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/Users/sang.park/dev/temp/cors-disabled-chorome" --disable-web-security --allow-running-insecure-content'
