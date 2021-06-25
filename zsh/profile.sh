@@ -18,6 +18,8 @@ if type brew &>/dev/null; then
     compinit
 fi  
 
+export LESS=-R
+
 # autoload -Uz vcs_info
 # precmd_vcs_info() { vcs_info }
 # precmd_functions+=( precmd_vcs_info )
