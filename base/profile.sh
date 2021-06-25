@@ -55,3 +55,5 @@ alias mdtail="pandoc -s -f markdown -t man \!* | groff -T utf8 -man | tail"
 alias g="grep"
 
 alias sl="subl"
+
+ssh-add -K
