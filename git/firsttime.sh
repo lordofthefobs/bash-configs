@@ -20,3 +20,5 @@ git config --global alias.stsp "stash pop"
 git config --global alias.unstage 'reset HEAD --'
 
 git config --global alias.p pull
+
+git config --global push.default current
