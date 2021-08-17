@@ -11,6 +11,7 @@ git config --global alias.com "checkout master"
 git config --global alias.fz fuzzy
 
 git config --global alias.hardreset 'reset --hard'
+git config --global alias.hr 'hardreset'
 
 git config --global alias.st status
 
