@@ -2,13 +2,14 @@ export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
 export EDITOR='subl -w'
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/"
 
 ## Setup Fzf
 export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
 
 ## Setup shared bin
 export PATH="$PATH:$BASH_CONFIGS_DIR/bin"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 ## setup rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
