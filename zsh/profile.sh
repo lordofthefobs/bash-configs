@@ -23,6 +23,9 @@ export LESS=-R
 export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"
 
+# original value: *?_-.[]~=/&;!#$%^(){}<>
+export WORDCHARS="*?_-[]~=&;!#$%^(){}<>"
+
 # autoload -Uz vcs_info
 # precmd_vcs_info() { vcs_info }
 # precmd_functions+=( precmd_vcs_info )
