@@ -6,3 +6,5 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 alias nr="npm run"
+alias nrt="npm run test"
+alias nrtu="npm run test:unit"

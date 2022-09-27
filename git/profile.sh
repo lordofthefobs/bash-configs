@@ -17,8 +17,6 @@ alias gsquash="git rebase -i HEAD~$1"
 alias gbrname="git rev-parse --abbrev-ref HEAD"
 alias gbrnamecopy="gbrname | pbcopy"
 
-alias grsci="gr @sci git"
-
 function gllsquash {
    git rebase -i HEAD~$1
 }
