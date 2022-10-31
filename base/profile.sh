@@ -10,6 +10,7 @@ export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
 ## Setup shared bin
 export PATH="$PATH:$BASH_CONFIGS_DIR/bin"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"  # sbin for brew
 
 ## setup rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
