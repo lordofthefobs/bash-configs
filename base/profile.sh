@@ -58,4 +58,4 @@ alias g="grep"
 
 alias sl="subl"
 
-ssh-add -K
+ssh-add --apple-use-keychain

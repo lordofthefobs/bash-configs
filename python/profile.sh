@@ -1,10 +1,9 @@
 #!/bin/bash
 
 ### pyenv
-if which pyenv > /dev/null; then 
-    eval "$(pyenv init -)";
-    pyenv virtualenvwrapper
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # if [ `id -u` != '0' ]; then
 

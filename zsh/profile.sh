@@ -26,6 +26,8 @@ export PATH="$HOME/.jenv/bin:$PATH"
 # original value: *?_-.[]~=/&;!#$%^(){}<>
 export WORDCHARS="*?_-[]~=&;!#$%^(){}<>"
 
+export HOMEBREW_GITHUB_API_TOKEN=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
+
 # autoload -Uz vcs_info
 # precmd_vcs_info() { vcs_info }
 # precmd_functions+=( precmd_vcs_info )

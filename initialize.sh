@@ -24,13 +24,13 @@ function load_profiles() {
 	load_file git/profile.sh
 
 	# # load docker profile
-	# load_file docker/profile.sh
+	load_file docker/profile.sh
 
 	# load_file vagrant/profile.sh
 
 	# load_file react-native/profile.sh
 
-	# load_file python/profile.sh
+	load_file python/profile.sh
 
 	# load_file gradle/profile.sh
 
