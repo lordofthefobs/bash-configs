@@ -6,39 +6,45 @@ function load_file() {
   fi
 }
 
+function load_profile() {
+	load_file "$1/profile.sh"
+}
+
 function load_profiles() {
    # load base profile
-	load_file base/profile.sh
+	load_profile base
 
 	# load zsh profile
-	load_file zsh/profile.sh
+	load_profile zsh
 
 	# load bash profile
-	load_file bash/profile.sh
+	load_profile bash
 
-	load_file dev/profile.sh
+	load_profile dev
 
-	load_file node/profile.sh
+	load_profile node
 
 	# # load git profile
-	load_file git/profile.sh
+	load_profile git
 
 	# # load docker profile
-	load_file docker/profile.sh
+	load_profile docker
 
-	# load_file vagrant/profile.sh
+	load_profile python
 
-	# load_file react-native/profile.sh
+	load_profile veeva
 
-	load_file python/profile.sh
+	load_profile vagrant
 
-	# load_file gradle/profile.sh
+	# load_profile react-native
 
-	# load_file ios/profile.sh
+	# load_profile gradle
 
-	# load_file kubectl/profile.sh
+	# load_profile ios
 
-	# load_file LL/profile.sh
+	# load_profile kubectl
+
+	# load_profile LL
 }
 
 load_profiles
