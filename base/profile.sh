@@ -19,6 +19,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 ## Setup jenv
 # eval "$(jenv init -)"
 
