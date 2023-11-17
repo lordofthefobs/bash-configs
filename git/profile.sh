@@ -14,6 +14,11 @@ alias g.clipboard.checkout='g.clipboard checkout'
 alias g.clipboard="git $1 $(pbpaste)"
 alias gsquash="git rebase -i HEAD~$1"
 
+alias gst="git status"
+
+alias gsts="git stash"
+alias gstsp="git stash pop"
+
 alias gbrname="git rev-parse --abbrev-ref HEAD"
 alias gbrnamecopy="gbrname | pbcopy"
 

@@ -2,7 +2,9 @@ export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
 export EDITOR='subl -w'
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/"
+export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/"
+export JAVA_17_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home/"
+export JAVA_HOME="$JAVA_8_HOME"
 
 ## Setup Fzf
 export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
