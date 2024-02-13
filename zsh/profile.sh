@@ -8,7 +8,7 @@
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
 # activate Antigen
-source /opt/homebrew/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 antigen init "$BASH_CONFIGS_DIR/zsh/antigenrc"
 
 if type brew &>/dev/null; then

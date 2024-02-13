@@ -4,7 +4,10 @@ export EDITOR='subl -w'
 
 export JAVA_8_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/"
 export JAVA_17_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home/"
-export JAVA_HOME="$JAVA_8_HOME"
+export JAVA_HOME="$JAVA_17_HOME"
+
+alias java8="export JAVA_HOME='$JAVA_8_HOME'"
+alias java17="export JAVA_HOME='$JAVA_17_HOME'"
 
 ## Setup Fzf
 export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
@@ -21,7 +24,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(brew shellenv)"
 
 ## Setup jenv
 # eval "$(jenv init -)"
