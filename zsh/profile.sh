@@ -7,6 +7,10 @@
 # Setup iTerm shell integration 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
 # activate Antigen
 source /usr/local/share/antigen/antigen.zsh
 antigen init "$BASH_CONFIGS_DIR/zsh/antigenrc"
