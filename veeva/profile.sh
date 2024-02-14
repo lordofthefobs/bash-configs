@@ -29,3 +29,13 @@ alias gitmergefeat="git merge $FEAT_BRANCH"
 alias setfeatbranch="exhort FEAT_BRANCH=$(git rev-parse --abbrev-ref HEAD | grep -Eo '((VCRM)|(CRM))-\d*')"
 
 alias vg.reload="MEMORY=10000 vagrant reload"
+
+# PVM related aliases
+
+function pvm1() { 
+	pvm $1 -i 1
+}
+
+function pvm2() { 
+	pvm $1 -i 2
+}
