@@ -12,7 +12,7 @@ autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
 # activate Antigen
-source /usr/local/share/antigen/antigen.zsh
+source "$HOMEBREW_HOME/share/antigen/antigen.zsh"
 antigen init "$BASH_CONFIGS_DIR/zsh/antigenrc"
 
 if type brew &>/dev/null; then

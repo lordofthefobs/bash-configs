@@ -26,7 +26,7 @@ alias gitepic="git checkout $EPIC_BRANCH"
 alias gitfeat="git checkout $FEAT_BRANCH"
 alias gitmergeepic="git merge $EPIC_BRANCH"
 alias gitmergefeat="git merge $FEAT_BRANCH"
-alias setfeatbranch="exhort FEAT_BRANCH=$(git rev-parse --abbrev-ref HEAD | grep -Eo '((VCRM)|(CRM))-\d*')"
+# alias setfeatbranch="export FEAT_BRANCH=$(git rev-parse --abbrev-ref HEAD | grep -Eo '((VCRM)|(CRM))-\d*')"
 
 alias vg.reload="MEMORY=10000 vagrant reload"
 
