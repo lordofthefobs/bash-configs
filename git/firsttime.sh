@@ -24,6 +24,7 @@ git config --global alias.sts 'stash'
 git config --global alias.stsp 'stash pop'
 
 git config --global alias.unstage 'reset HEAD --'
+git config --global alias.uncommit 'reset --soft HEAD~'
 
 git config --global alias.p 'pull'
 

@@ -12,6 +12,9 @@ alias hdCrm="$DEV_TOOLS_ROOT/deployment/hot_deploy_family.py -f vaultcrm_v"
 
 alias vvgup='MEMORY=10000 vagrant up'
 
+alias vcrmbuild="mvn clean install -T 2C -DskipTests -pl '-ui'"
+alias vcrmbuild-full="mvn clean install -T 2C"
+
 function copy-jira() {
 	local jira="$(git rev-parse --abbrev-ref HEAD | grep -Eo '((VCRM)|(CRM))-\d*')"
 	echo "Jira is ${jira}"
