@@ -12,8 +12,13 @@ alias hdCrm="$DEV_TOOLS_ROOT/deployment/hot_deploy_family.py -f vaultcrm_v"
 
 alias vvgup='MEMORY=10000 vagrant up'
 
-alias vcrmbuild="mvn clean install -T 2C -DskipTests -pl '-ui'"
-alias vcrmbuild-full="mvn clean install -T 2C"
+alias vcrmbuild='mvn clean install -T 2C -DskipTests -pl "-ui"'
+alias vcrmbuild.withtest='mvn clean install -T 2C -pl "-ui"'
+
+alias vcrmbuild.full.withtest='mvn clean install -T 2C'
+alias vcrmbuild.full='mvn clean install -T 2C -DskipTests'
+
+alias vcrmbuild.test="mvn clean test -T 2C"
 
 function copy-jira() {
 	local jira="$(git rev-parse --abbrev-ref HEAD | grep -Eo '((VCRM)|(CRM))-\d*')"
@@ -34,6 +39,15 @@ alias gitmergefeat="git merge $FEAT_BRANCH"
 alias vg.reload="MEMORY=10000 vagrant reload"
 
 # PVM related aliases
+
+function pvm-update-snapshot() {
+	pushd
+	cd ~/.m2/repository/com/veeva/vault/app/vaultcrm/vaultapp-package
+	local snapshot_folder="sang.park@sangpark-pvm-2.vaultpvm.com:/home/sang.park/snapshots"
+	scp -r "$1-SNAPSHOT" "$snapshot_folder"
+	scp -r maven-metadata-local.xml "$snapshot_folder"
+	popd
+}
 
 function pvm1() { 
 	pvm $1 -i 1
