@@ -68,3 +68,6 @@ alias g="grep"
 alias sl="subl"
 
 ssh-add --apple-use-keychain
+
+alias unload_globalprotect="launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
+alias load_globalprotect="launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
