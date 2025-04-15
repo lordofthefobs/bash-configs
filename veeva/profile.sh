@@ -18,7 +18,7 @@ alias vcrmbuild.withtest='./gradlew build -x npmCleanInstall -x buildJSNode -x R
 alias vcrmbuild.full='./gradlew build -x test -x RunJSTests'
 alias vcrmbuild.full.withtest='./gradlew build'
 
-alias vcrmtest="./gradlew test -x runJSTets -x runJSLint"
+alias vcrmtest="./gradlew test -x runJSTests -x runJSLint"
 alias vcrmtest.full="./gradlew test"
 
 alias hd.pvm="./gradlew hotDeploy -PhotDeploy.host=sangpark-pvm-2.vaultpvm.com"
