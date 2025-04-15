@@ -12,13 +12,25 @@ alias hdCrm="$DEV_TOOLS_ROOT/deployment/hot_deploy_family.py -f vaultcrm_v"
 
 alias vvgup='MEMORY=10000 vagrant up'
 
-alias vcrmbuild='mvn clean install -T 2C -DskipTests -pl "-ui"'
-alias vcrmbuild.withtest='mvn clean install -T 2C -pl "-ui"'
+alias vcrmbuild='./gradlew build -x npmCleanInstall -x buildJSNode -x RunJSTests -x test -x aggregateJavadoc -x javadoc'
+alias vcrmbuild.withtest='./gradlew build -x npmCleanInstall -x buildJSNode -x RunJSTests -x RunJSLint'
 
-alias vcrmbuild.full.withtest='mvn clean install -T 2C'
-alias vcrmbuild.full='mvn clean install -T 2C -DskipTests'
+alias vcrmbuild.full='./gradlew build -x test -x RunJSTests'
+alias vcrmbuild.full.withtest='./gradlew build'
 
-alias vcrmbuild.test="mvn clean test -T 2C"
+alias vcrmtest="./gradlew test -x runJSTets -x runJSLint"
+alias vcrmtest.full="./gradlew test"
+
+alias hd.pvm="./gradlew hotDeploy -PhotDeploy.host=sangpark-pvm-2.vaultpvm.com"
+
+
+# alias vcrmbuild='mvn clean install -T 2C -DskipTests -pl "-ui"'
+# alias vcrmbuild.withtest='mvn clean install -T 2C -pl "-ui"'
+
+# alias vcrmbuild.full.withtest='mvn clean install -T 2C'
+# alias vcrmbuild.full='mvn clean install -T 2C -DskipTests'
+
+# alias vcrmbuild.test="mvn clean test -T 2C"
 
 function copy-jira() {
 	local jira="$(git rev-parse --abbrev-ref HEAD | grep -Eo '((VCRM)|(CRM))-\d*')"
