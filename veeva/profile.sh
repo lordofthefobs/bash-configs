@@ -1,7 +1,7 @@
 export DEV_TOOLS_ROOT="$HOME/dev/veevavault/dev_tools"
 export VAGRANT_ROOT="$HOME/dev/veevavault/vagrant"
 
-export PATH="${PATH}:${DEV_TOOLS_ROOT}/GitUtils/bin:${DEV_TOOLS_ROOT}/PVMUtils/bin"
+export PATH="${PATH}:${DEV_TOOLS_ROOT}/GitUtils/bin:${DEV_TOOLS_ROOT}/PVMUtils/bin:/opt/homebrew/opt/mysql@8.0/bin"
 
 alias vvlocal='sudo ssh -p 2222 -i ~/.vagrant.d/insecure_private_key root@my.vaultdev.com -L 443:127.0.0.1:8443 -L 80:127.0.0.1:8080 -L 4567:127.0.0.1:4567 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
