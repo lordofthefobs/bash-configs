@@ -36,6 +36,8 @@ function load_profiles() {
 
 	load_profile vagrant
 
+	load_profile ruby
+
 	# load_profile react-native
 
 	# load_profile gradle
