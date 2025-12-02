@@ -44,6 +44,9 @@ export SURVEY_P1_EPIC="epic.branch/233/VCRM-8015-Surveys"
 export SURVEY_P2_EPIC="epic.branch/242/VCRM-27371-Survey-Phase-2"
 export SURVEY_P3_EPIC="epic.branch/243/VCRM-36282-survey-phase3-translation"
 export SURVEY_P4_EPIC="epic.branch/243/VCRM-53814-Surveys-for-ChildAccounts-epic"
+export DOC_INT_CALL_EPIC="epic.branch/253/VCRM-40641_Documented_Interest_OL"
+export DOC_INT_ACCOUNT_EPIC="epic.branch/252/VCRM-116631-Documented-Interest-AccountRelatedList-Epic"
+
 export EPIC_BRANCH="epic.branch/251/VCRM-74400-Surveys-25R1.2"
 
 alias gitepic="git checkout $EPIC_BRANCH"
